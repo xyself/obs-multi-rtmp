@@ -1,9 +1,10 @@
 name: Build Project
 on:
+  workflow_dispatch: {}
   workflow_call:
     outputs:
       pluginName:
-        description: Project name detected by parsing build spec file
+        description: Project name detected
         value: ${{ jobs.check-event.outputs.pluginName }}
 jobs:
   check-event:
